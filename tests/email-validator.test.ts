@@ -30,4 +30,9 @@ describe("Email Validator", () => {
         const actual = emailValidator("@vinci.be");
         expect(actual).toBeFalsy();
     });
+
+    it("should return false when @ has no text after", () => {
+        const actual = emailValidator("loic.dedeyn@");
+        expect(actual).toBeFalsy();
+    });
 });
