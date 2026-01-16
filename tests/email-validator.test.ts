@@ -35,4 +35,15 @@ describe("Email Validator", () => {
         const actual = emailValidator("loic.dedeyn@");
         expect(actual).toBeFalsy();
     });
+
+
+    it("should return false when email has empty string", () => {
+        const actual = emailValidator("");
+        expect(actual).toBeFalsy();
+    });
+
+    it("should return false when email has only spaces", () => {
+        const actual = emailValidator("  ");
+        expect(actual).toBeFalsy();
+    });
 });
