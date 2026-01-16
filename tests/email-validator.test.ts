@@ -14,5 +14,10 @@ describe("Email Validator", () => {
     it("should return false when missing @", () => {
         const actual = emailValidator("google");
         expect(actual).toBeFalsy();
-    })
+    });
+
+      it("should return false when missing a `dot (.)`", () => {
+        const actual = emailValidator("loic@vinci");
+        expect(actual).toBeFalsy();
+    });
 });
