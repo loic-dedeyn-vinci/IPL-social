@@ -5,5 +5,5 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["*.ts", "tests/**/*.ts"]
+  "include": ["*.ts", "tests/**/*.ts", "jest.config.js"]
 }
