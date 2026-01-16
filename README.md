@@ -16,6 +16,13 @@ loic.dedeyn@student.vinci.be
 Il s'agit d'un petit programme de verification d'email implementer avec le TDD.
 J'ai egalement mis en place un pipeline CI avec Github Actions.
 
+### La consigne etait:
+> La fonction doit vérifier qu’une chaine de caractère est bien une adresse email valide :
+> a. Il doit contenir au moins un @
+> b. Il doit contenir au moins un point dans le nom de domaine (et pas le dernier caractère
+> c. Il ne peut contenir aucun espace
+> d. Il doit avoir du texte avant et après le @
+
 ## Lancer le test
 
 **Attention de bien avoir nodejs installe sur votre machine!**
