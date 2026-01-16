@@ -1,3 +1,3 @@
 export default function emailValidator(email: string): boolean {
-    return true;
+    return email.includes("@");
 };
