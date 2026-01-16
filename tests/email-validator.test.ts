@@ -20,4 +20,9 @@ describe("Email Validator", () => {
         const actual = emailValidator("loic@vinci");
         expect(actual).toBeFalsy();
     });
+
+    it("should return false when having a space", () => {
+        const actual = emailValidator("loic@vinci. be");
+        expect(actual).toBeFalsy();
+    });
 });
