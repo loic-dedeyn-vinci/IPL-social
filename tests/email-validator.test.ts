@@ -1,15 +1,5 @@
 import emailValidator from "../email-validator";
 
-
-// Il doit contenir au moins un @
-
-// Il doit contenir au moins un point 
-// dans le nom de domaine (et pas le dernier caractère
-
-// Il ne peut contenir aucun espace
-
-// Il doit avoir du texte avant et après le @
-
 describe("Email Validator", () => {
     it("should return false when missing @", () => {
         const actual = emailValidator("google");
@@ -50,5 +40,10 @@ describe("Email Validator", () => {
     it("should return false when email has only spaces", () => {
         const actual = emailValidator("  ");
         expect(actual).toBeFalsy();
+    });
+
+    it("should return true when email is valid", () => {
+        const actual = emailValidator("loic@student.vinci.be");
+        expect(actual).toBeTruthy();
     });
 });
