@@ -16,8 +16,8 @@ describe("Email Validator", () => {
         expect(actual).toBeFalsy();
     });
 
-    it("should return false when missing a `dot (.)`", () => {
-        const actual = emailValidator("loic@vinci");
+    it("should return false when missing a `dot (.) in domain name`", () => {
+        const actual = emailValidator("loic.dedeyn@vinci");
         expect(actual).toBeFalsy();
     });
 
@@ -39,6 +39,11 @@ describe("Email Validator", () => {
 
     it("should return false when email has empty string", () => {
         const actual = emailValidator("");
+        expect(actual).toBeFalsy();
+    });
+
+    it("should return false when email has only spaces", () => {
+        const actual = emailValidator("  ");
         expect(actual).toBeFalsy();
     });
 
